@@ -1,0 +1,20 @@
+name: "HCL AppScan SAST"
+on:
+   push:
+    branches:
+      - main
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run AppScan SAST scan
+        uses: HCL-TECH-SOFTWARE/appscan-sast-action@v1.0.1
+        with:
+          asoc_key: ${{secrets.ASOC_KEY}}
+          asoc_secret: ${{secrets.ASOC_SECRET}}
+          application_id: 4b48b679-d53e-4253-aebb-49bef9d56716
+          
+    env: 
+      GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
