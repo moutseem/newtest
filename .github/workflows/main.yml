@@ -14,7 +14,7 @@ jobs:
         with:
           asoc_key: ${{secrets.ASOC_KEY}}
           asoc_secret: ${{secrets.ASOC_SECRET}}
-          application_id: fe19115a-5882-4ac5-8d3f-c3008cbcb008
+          application_id: e2073490-45ff-4ad2-b3da-d5fd9c96c636
           
     env: 
       GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
